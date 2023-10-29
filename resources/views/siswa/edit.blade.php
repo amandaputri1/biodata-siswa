@@ -51,7 +51,7 @@
                                 @enderror
                                 <div class="form-group">
                                     <label for="Tanggal lahir">Tanggal lahir</label>
-                                    <input type="date" class="form-control" name="tanggal_lahir" id="kode" placeholder="Masukan Tanggal lahir" value="{{ $siswas[0]->nama }}" >
+                                    <input type="date" class="form-control" name="tanggal_lahir" id="kode" placeholder="Masukan Tanggal lahir" value="{{ $siswas[0]->tanggal_lahir }}" >
                                 </div>
                                 @error('Tanggal_lahir')
                                 <div class="alert alert-danger mt-1">{{ $message }}</div>
@@ -59,7 +59,7 @@
                                 <div class="form-group">
                                     <label for="jenis_kelamin">Jenis Kelamin</label>
                                     <select class="custom-select @error('jenis_kelamin') is-invalid @enderror" name="jenis_kelamin" value="{{ $siswas[0]->jenis_kelamin }}">
-                                        <option selected disabled></option>
+                                        <option selected>{{ $siswas[0]->jenis_kelamin}}</option>
                                         <option value="L">LAKI-LAKI</option>
                                         <option value="P">PEREMPUAN</option>
                                     </select>
@@ -69,7 +69,17 @@
                                 @enderror
                                 <div class="form-group">
                                     <label>Jurusan</label>
-                                    <input type="text" class="form-control @error('jurusan') is-invalid @enderror" name="jurusan" id="jurusan" placeholder="" value="{{ $siswas[0]->jurusan }}"> 
+                                    <select class="custom-select @error('jurusan') is-invalid @enderror" name="jurusan" value="{{ $siswas[0]->jurusan}}">
+                                        <option selected disabled>Pilih Jurusan</option>
+                                        <option selected>{{ $siswas[0]->jurusan }}</option>
+                                        <option>RPL</option>
+                                        <option>DPIB</option>
+                                        <option>TP</option>
+                                        <option>TFLM</option>
+                                        <option>TEI</option>
+                                        <option>TITL</option>
+                                        <option>TKJ</option>
+                                    </select>
                                 </div>
                                  @error('jurusan')
                                  <div class="alert alert-danger mt-1">{{ $message }}</div>
@@ -85,6 +95,7 @@
                                     <label>Agama</label>
                                     <select class="custom-select @error('agama') is-invalid @enderror" name="agama" value="{{ $siswas[0]->agama }}">
                                         <option selected disabled>Pilih Agama</option>
+                                        <option selected>{{ $siswas[0]->agama }}</option>
                                         <option value="ISLAM">Islam</option>
                                         <option value="KRISTEN">Kristen</option>
                                     </select>
@@ -100,4 +111,10 @@
                             <!-- /.content -->
                         </form>
                     </div>
-                    @endsection
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@endsection

@@ -62,7 +62,7 @@
                         </div>
                         <div class="form-group">
                             <label>Alamat</label>
-                            <textarea class="form-control" rows="3" name="alamat" placeholder="Masukan alamat"></textarea>
+                            <textarea class="form-control" rows="3" name="alamat" placeholder="Masukan alamat" value="alamat"></textarea>
                         </div>
                         <div class="form-group">
                             <label>Agama</label>
@@ -70,6 +70,9 @@
                                 <option selected disabled>Pilih Agama</option>
                                 <option value="ISLAM">Islam</option>
                                 <option value="KRISTEN">Kristen</option>
+                                <option value="KATOLIK">Katolik</option>
+                                <option value="BUDDHA">Buddha</option>
+                                <option value="KONG HU CHU">Kong Hu Chu</option>
                             </select>
                         </div>
                     </div>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Log in</title>
+  <title>Log in</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -14,15 +14,15 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('Template/dist/css/adminlte.min.css') }}">
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style="background-color: #2F5B68">
 <div class="login-box">
   <div class="login-logo">
       <img src="{{ asset('Template/docs/assets/img/logo neskar.png') }}" alt="AdminLTE Logo" class="" style="opacity: .8; width: 300px;">
   </div>
   <!-- /.login-logo -->
   <div class="card">
-    <div class="card-body login-card-body">
-      <p class="login-box-msg">Sign in to start your session</p>
+    <div class="card-body login-card-body" style="background-color: #83ABB7">
+      <p class="login-box-msg" style="color: #fff">LOG IN</p>
 
       <form action="{{ route('auth.authentication') }}" method="post">
         @csrf
@@ -57,7 +57,7 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            <button type="submit" class="btn btn-primary btn-block">LOG IN</button>
           </div>
           <!-- /.col -->
         </div>

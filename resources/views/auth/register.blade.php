@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Registration Page</title>
+  <title>Registrasi Biodata Siswa</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -14,7 +14,7 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('Template/dist/css/adminlte.min.css') }}">
 </head>
-<body class="hold-transition register-page">
+<body class="hold-transition register-page" style="background-color: #2F5B68">
 <div class="register-box">
   <div class="register-logo">
       <img src="{{ asset('Template/docs/assets/img/logo neskar.png') }}" alt="AdminLTE Logo" class="" style="opacity: .8; width: 300px;">
@@ -63,13 +63,15 @@
             </div>
           </div>
           <!-- /.col -->
+          <a href="{{ route('auth.login')}}">I already have an account</a></li>
           <div class="col-4">
             <button type="submit" class="btn btn-primary btn-block">Register</button>
           </div>
+          
           <!-- /.col -->
         </div>
       </form>
-
+      
       {{-- <div class="social-auth-links text-center">
         <p>- OR -</p>
         <a href="#" class="btn btn-block btn-primary">

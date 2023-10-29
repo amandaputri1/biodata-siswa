@@ -49,16 +49,16 @@
                             </div>
                             <div class="form-group">
                                 <label for="jk">Jenis Kelamin</label>
-                                <select class="custom-select" name="jenis_kelamin" value="{{ $siswas[0]->jenis_kelamin }}" disabled>
-                                    <option selected disabled>Pilih Jenis Kelamin</option>
+                                <select class="custom-select" name="jenis_kelamin" disabled>
+                                    <option selected disabled>{{ $siswas[0]->jenis_kelamin }}</option>
                                     <option value="L">LAKI-LAKI</option>
                                     <option value="P">PEREMPUAN</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label>Jurusan</label>
-                                <select class="custom-select" name="jurusan" value="{{ $siswas[0]->jurusan }}" disabled>
-                                    <option selected disabled>Pilih Jurusan</option>
+                                <select class="custom-select" name="jurusan" disabled>
+                                    <option selected disabled>{{ $siswas[0]->jurusan }}</option>
                                     <option value="RPL">RPL</option>
                                     <option value="DPIB">DPIB</option>
                                     <option value="TP">TP</option>
@@ -70,14 +70,17 @@
                             </div>
                             <div class="form-group">
                                 <label>Alamat</label>
-                                <textarea class="form-control" rows="3" name="alamat" placeholder="Masukan alamat" value="{{ $siswas[0]->alamat }}" disabled></textarea>
+                                <textarea class="form-control" rows="3" name="alamat" placeholder="Masukan alamat"  disabled>{{ $siswas[0]->alamat }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label>Agama</label>
-                                <select class="custom-select" name="agama" value="{{ $siswas[0]->agama }}" disabled>
-                                    <option selected disabled>Pilih Agama</option>
+                                <select class="custom-select" name="agama"  disabled>
+                                    <option selected disabled>{{ $siswas[0]->agama }}</option>
                                     <option value="ISLAM">Islam</option>
                                     <option value="KRISTEN">Kristen</option>
+                                    <option value="KATOLIK">Katolik</option>
+                                    <option value="BUDDHA">Buddha</option>
+                                    <option value="KONG HU CHU">Kong Hu Chu</option>
                                 </select>
                             </div>
                         </div>

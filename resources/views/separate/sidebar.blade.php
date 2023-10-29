@@ -6,7 +6,7 @@
   </a>
 
   <!-- Sidebar -->
-  <div class="sidebar">
+    <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="info" style="color: #ffff">
@@ -18,9 +18,9 @@
       <div class="form-inline">
           <div class="input-group" data-widget="sidebar-search" >
               <input class="form-control form-control-sidebar" type="search" placeholder="Search"
-                  aria-label="Search" style="background-color: #fff">
+                  aria-label="Search" >
               <div class="input-group-append">
-                  <button class="btn btn-sidebar" style="background-color: #fff; color:black" >
+                  <button class="btn btn-sidebar" >
                       <i class="fas fa-search fa-fw"></i>
                   </button>
               </div>
@@ -61,7 +61,7 @@
               <li>
                   <form action="{{ route('auth.logout') }}" method="POST">
                       @csrf
-                      <button type="submit" class="nav-link btn btn-warning">Logout</button>
+                      <button type="submit" class="nav-link btn btn-danger">Logout</button>
                   </form>
               </li>
           </ul>
