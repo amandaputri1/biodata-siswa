@@ -61,12 +61,13 @@ class AuthController extends Controller
             'password' => 'required',
         ]);
 
-        $user::create([
-            'name' => 'suci',
-            'email' => 'suci@gmail.com',
-            'password' => Hash::make('12345678'),
-            'role_id'      => 1,
-         ]);
+        // $user::create([
+        //     'name' => 'oci',
+        //     'email' => 'oci@gmail.com',
+        //     'password' => Hash::make('12345678'),
+        //     'role_id'      => 1,
+        //  ]);
+         
          
 
         $credentials = $request->only('email', 'password');
