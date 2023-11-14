@@ -18,32 +18,32 @@ class AuthController extends Controller
         ]);
     }
 
-    // register form
-    public function register()
-    {
-        return view('auth.register');
-    }
+    // // register form
+    // public function register()
+    // {
+    //     return view('auth.register');
+    // }
 
-    // store register
-    public function store(Request $request, User $user)
-    {
-        $request->validate([
-            'name' => 'required|string',
-            'email' => 'required|email|max:250|unique:users,email',
-            'password' => 'required|min:8',
-        ]);
+    // // store register
+    // public function store(Request $request, User $user)
+    // {
+    //     $request->validate([
+    //         'name' => 'required|string',
+    //         'email' => 'required|email|max:250|unique:users,email',
+    //         'password' => 'required|min:8',
+    //     ]);
 
-        $user::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password)
-        ]);
+    //    $user::create([
+    //         'name' => 'suci',
+    //         'email' => 'suci@gmail.com',
+    //         'password' => Hash::make('12345678'),
+    //      ]);
 
-        $credentials = $request->only('email', 'password');
-        Auth::attempt($credentials);
-        $request->session()->regenerate();
-        return redirect()->route('dashboard');
-    }
+    //     $credentials = $request->only('email', 'password');
+    //     Auth::attempt($credentials);
+    //     $request->session()->regenerate();
+    //     return redirect()->route('dashboard');
+    // }
 
 
 
@@ -54,18 +54,26 @@ class AuthController extends Controller
     }
 
     // auth proses login
-    public function auth(Request $request)
+    public function auth(Request $request, User $user)
     {
         $request->validate([
             'email' => 'required|email',
             'password' => 'required',
         ]);
 
+        $user::create([
+            'name' => 'suci',
+            'email' => 'suci@gmail.com',
+            'password' => Hash::make('12345678'),
+            'role_id'      => 1,
+         ]);
+         
+
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials))
         {
             $request->session()->regenerate();
-            return redirect()->route('dashboard');
+            return redirect()->route('auth.dashboard');
         }
 
         return redirect()->back()->withErrors([

@@ -4,6 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\GuruController;
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +26,10 @@ Route::get('/', function () {
 
 // For CRUD table cast
 Route::resource('/siswa', SiswaController::class);
+Route::resource('/admin', AdminController::class);
+Route::resource('/user', GuruController::class);
+
+
 
 Route::controller(AuthController::class)->group(function() {
     // register form
@@ -34,5 +43,5 @@ Route::controller(AuthController::class)->group(function() {
     // logout
     Route::post('/logout', 'logout')->name('auth.logout');
     // dashboard page
-    Route::get('/dashboard', 'dashboard')->name('dashboard');
+    Route::get('/dashboard', 'dashboard')->name('auth.dashboard');
 });
